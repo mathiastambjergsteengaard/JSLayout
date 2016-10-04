@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact', as: :contact
 
   resources :products
+  resources :orders
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

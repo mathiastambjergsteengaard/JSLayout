@@ -5,7 +5,7 @@
     %title= "Mannakorn.dk"
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
-  %body
+  %body{class: controller.controller_name + " " + action_name}
     .header
       .nav
         %ul.nav.navbar-nav

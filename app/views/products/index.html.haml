@@ -1,2 +1,7 @@
-%h1= "JS Layout"
-%h2= "Layout der er til at betale"
+- @products.in_groups_of(4).each do |product_row|
+  .row
+    - product_row.each do |product|
+      - if product.present?
+        .col-xs-3
+          %h2= product.name
+          %p= product.description
