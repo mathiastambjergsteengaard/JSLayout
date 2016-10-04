@@ -2,7 +2,16 @@
 %html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
-    %title= "JSLayout"
-    %body
+    %title= "Mannakorn.dk"
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+  %body
+    .header
+      .nav
+        %ul.nav.navbar-nav
+          %li{style: "font-size: 50px"}= link_to "Overblik", products_path
+          %li= link_to "Se mere", more_path
+          %li= link_to "Kontakt", contact_path
+    .container
       = yield
 

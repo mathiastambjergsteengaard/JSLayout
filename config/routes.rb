@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   root to: 'products#index'
+  get 'more' => 'static_pages#more', as: :more
+  get 'contact' => 'static_pages#contact', as: :contact
+
+  resources :products
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
