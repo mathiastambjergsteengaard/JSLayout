@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161004201347) do
+ActiveRecord::Schema.define(version: 20161005070647) do
 
   create_table "products", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20161004201347) do
     t.decimal  "price",                     precision: 10
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "html_class",  limit: 255
+    t.string   "image_ref",   limit: 255
   end
 
 end

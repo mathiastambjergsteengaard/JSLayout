@@ -3,5 +3,8 @@
     - product_row.each do |product|
       - if product.present?
         .col-xs-3
-          %h2= product.name
-          %p= product.description
+          .product_block
+            = image_tag(product.image_ref || 'salme_37_5_road', class: product.html_class || 'square')
+            %h2= product.name
+            %p= product.description
+            %p= product.price

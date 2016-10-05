@@ -1,9 +1,16 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "font-awesome";
 
 body{
   .container{
     width: 100%;
+  }
+  img.square{
+    width: 100%;
+  }
+  .product_block{
+    padding: 20px;
   }
 }
 
