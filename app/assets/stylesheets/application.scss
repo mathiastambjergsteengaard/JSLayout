@@ -9,8 +9,19 @@ body{
   img.square{
     width: 100%;
   }
+  img.vertical_rec{
+    width: 48%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .product_block{
     padding: 20px;
+  }
+  .badge{
+    position:absolute;
+    right: 7px;
+    top: 19px;
   }
 }
 

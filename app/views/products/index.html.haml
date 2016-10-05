@@ -4,7 +4,24 @@
       - if product.present?
         .col-xs-3
           .product_block
-            = image_tag(product.image_ref || 'salme_37_5_road', class: product.html_class || 'square')
+            = image_tag(product.image_ref || 'salme_37_5_road', class: (product.html_class || 'square') + " img-thumbnail")
             %h2= product.name
             %p= product.description
             %p= product.price
+            %a.btn.btn-primary{data: product.id.to_s, class: "add", name: product.image_ref || 'salme_37_5_road'}
+              Tilføj til ordrelisten
+              %i.fa.fa-plus
+
+:coffeescript
+  $ ->
+    $('.badge').html(getCookie("order_number"))
+    order_number = getCookie("order_number")
+    $('.add').click ->
+      console.log(getCookie("salme_37_5_road"))
+      console.log(getCookie("order_number"))
+      setCookie($(this).attr('name'),$(this).attr('data'))
+      order_number++
+      setCookie("order_number", order_number.toString())
+      $('.badge').html(getCookie("order_number"))
+
+

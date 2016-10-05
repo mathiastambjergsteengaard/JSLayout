@@ -12,6 +12,10 @@
           %li{style: "font-size: 50px"}= link_to "Overblik", products_path
           %li= link_to "Se mere", more_path
           %li= link_to "Kontakt", contact_path
+          %li
+            = link_to orders_path do
+              %i.fa.fa-shopping-cart.fa-4x
+                %span.badge= 10
     .container
       = yield
 
