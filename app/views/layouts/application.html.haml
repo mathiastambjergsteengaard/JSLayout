@@ -5,7 +5,7 @@
     %title= "Mannakorn.dk"
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
-  %body{class: controller.controller_name + " " + action_name}
+  %body{class: controller.controller_name + "_" + action_name}
     .header
       .nav.navbar.navbar-inverse
         %ul.nav.navbar-nav
@@ -13,9 +13,17 @@
           %li.more= link_to "Se mere", more_path
           %li.contact= link_to "Kontakt", contact_path
           %li.cart
-            = link_to new_order_path do
+            = link_to orders_path, class: 'cart' do
               %i.fa.fa-shopping-cart
                 %span.badge= 0
     .container
       = yield
+
+:coffeescript
+  $ ->
+    $('.badge').html(getCookie("order_number"))
+    Shadowbox.init();
+    order_id = getCookie('order_id')
+    if order_id != null
+      $('.cart').attr('href', "/orders/" + order_id)
 

@@ -1,0 +1,13 @@
+.panel.panel-default
+  .panel-body
+    .row
+      .col-xs-3
+        = link_to asset_path(product.image_ref), rel: 'shadowbox' do
+          = image_tag(product.image_ref)
+      .col-xs-3
+        %h2
+          = product.name
+        %p
+          = product.description
+        %p= product.count_in_order(@order.id)
+

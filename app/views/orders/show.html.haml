@@ -1,0 +1,23 @@
+.panel.panel-default
+  .panel-heading
+    = "Ordreliste"
+  .panel-body
+    - if @order.present?
+      - @order.products.each_with_index do |product, index|
+        - if (index-1)%2 == 0
+          .row
+            .col-xs-6
+              = render partial: 'product', locals: {product: product}
+        - else
+          .col-xs-6
+            = render partial: 'product', locals: {product: product}
+
+- if @order.present?
+  :coffeescript
+    $ ->
+      order_number = "#{@order.item_count}"
+      order_id = "#{@order.id}"
+      setCookie("order_number", order_number)
+      setCookie("order_id", order_id)
+      $('.badge').html(getCookie("order_number"))
+

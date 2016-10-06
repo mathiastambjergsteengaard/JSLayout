@@ -26,13 +26,7 @@ body{
   .container{
     width: 100%;
   }
-  img{
-    box-shadow: 10px 10px 5px grey;
-  }
 
-  img.square{
-    width: 100%;
-  }
   img.vertical_rec{
     width: 48%;
     display: block;
@@ -46,6 +40,24 @@ body{
     position:absolute;
     right: 7px;
     top: 16px;
+  }
+}
+
+.products_show{
+  img{
+    width:100%
+  }
+}
+
+.products_index{
+  img{
+    box-shadow: 10px 10px 5px grey;
+  }
+}
+
+.orders_show{
+  img{
+    width:100%;
   }
 }
 
