@@ -12,9 +12,12 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require shadowbox
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+Shadowbox.init();
 
 function setCookie(cname, cvalue) {
     document.cookie = cname + "=" + cvalue + "; "

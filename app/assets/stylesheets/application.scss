@@ -1,11 +1,35 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+ @import "shadowbox";
+
+.nav{
+  .overview, .more, .contact, .cart{
+
+  }
+  .overview, .more, .contact{
+    a{
+      height: 67px;
+      font-size:33px;
+    }
+  }
+  .cart{
+    font-size:39px;
+  }
+}
+
+ul.nav.navbar-nav {
+    height: 67px;
+}
 
 body{
   .container{
     width: 100%;
   }
+  img{
+    box-shadow: 10px 10px 5px grey;
+  }
+
   img.square{
     width: 100%;
   }
@@ -21,7 +45,7 @@ body{
   .badge{
     position:absolute;
     right: 7px;
-    top: 19px;
+    top: 16px;
   }
 }
 

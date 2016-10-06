@@ -7,15 +7,15 @@
     = javascript_include_tag 'application'
   %body{class: controller.controller_name + " " + action_name}
     .header
-      .nav
+      .nav.navbar.navbar-inverse
         %ul.nav.navbar-nav
-          %li{style: "font-size: 50px"}= link_to "Overblik", products_path
-          %li= link_to "Se mere", more_path
-          %li= link_to "Kontakt", contact_path
-          %li
-            = link_to orders_path do
-              %i.fa.fa-shopping-cart.fa-4x
-                %span.badge= 10
+          %li.overview.active= link_to "Overblik", products_path
+          %li.more= link_to "Se mere", more_path
+          %li.contact= link_to "Kontakt", contact_path
+          %li.cart
+            = link_to new_order_path do
+              %i.fa.fa-shopping-cart
+                %span.badge= 0
     .container
       = yield
 

@@ -4,7 +4,8 @@
       - if product.present?
         .col-xs-3
           .product_block
-            = image_tag(product.image_ref || 'salme_37_5_road', class: (product.html_class || 'square') + " img-thumbnail")
+            = link_to asset_path(product.image_ref), rel: 'shadowbox' do
+              = image_tag(product.image_ref || 'salme_37_5_road', class: (product.html_class || 'square') + " img-thumbnail")
             %h2= product.name
             %p= product.description
             %p= product.price
@@ -14,6 +15,7 @@
 
 :coffeescript
   $ ->
+    Shadowbox.init();
     $('.badge').html(getCookie("order_number"))
     order_number = getCookie("order_number")
     $('.add').click ->
