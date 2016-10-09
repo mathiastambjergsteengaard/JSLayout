@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 20161006151612) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "orders_products", id: false, force: :cascade do |t|
+  create_table "orders_products", force: :cascade do |t|
     t.integer "product_id", limit: 4
     t.integer "order_id",   limit: 4
-    t.integer "count",      limit: 4, default: 1
+    t.integer "count",      limit: 4, default: 0
   end
 
   add_index "orders_products", ["order_id"], name: "index_orders_products_on_order_id", using: :btree
