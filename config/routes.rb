@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact', as: :contact
 
   resources :products
-  resources :orders
-
+  resources :orders do
+    member do
+      get 'check_out'
+    end
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

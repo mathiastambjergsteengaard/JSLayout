@@ -12,6 +12,18 @@
           .col-xs-6
             = render partial: 'product', locals: {product: product}
 
+.to_checkout.badge
+  = link_to '#' do
+    = "Gå til checkout"
+    %i.fa.fa-arrow-circle-right
+
+.shop_more.badge
+  = link_to products_path do
+    %i.fa.fa-arrow-circle-left
+    = "Vælg mere"
+
+= render partial: 'confirmation_box'
+
 - if @order.present?
   :coffeescript
     $ ->
