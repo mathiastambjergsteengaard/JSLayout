@@ -6,9 +6,11 @@ Rails.application.routes.draw do
   resources :products
   resources :orders do
     member do
-      get 'check_out'
+      post 'check_out'
     end
   end
+  resources :users
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

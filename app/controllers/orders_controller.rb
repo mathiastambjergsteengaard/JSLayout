@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  skip_before_filter :verify_authenticity_token
+
   def index
     render 'show'
   end
@@ -22,6 +24,12 @@ class OrdersController < ApplicationController
   end
 
   def check_out
-    @order = Order.find(params[:id])
+    @order = Order.find(params[:user][:order_id])
+    @user.new(params[:user])
+    fds
+    @user.save
+    @order.user_id = @user.id
+    dfsfds
+    redirect_to root_path
   end
 end

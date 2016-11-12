@@ -1,3 +1,2 @@
-class Product < ActiveRecord::Base
-  belongs_to :order, foreign_key: :user_id
+class User < ActiveRecord::Base
 end
