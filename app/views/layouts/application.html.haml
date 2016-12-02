@@ -7,8 +7,12 @@
     = javascript_include_tag 'application'
   %body{class: controller.controller_name + "_" + action_name}
     = render partial: '/layouts/navbar'
-    .container
-      = yield
+    .row
+      .col-xs-2
+      .col-xs-8
+        .container
+          = yield
+
 
 :coffeescript
   $ ->

@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   skip_before_filter :verify_authenticity_token
   def index
-    @products = Product.all
+    @products = Product.where(product_type: params[:product_type].to_i)
   end
 
   def show
