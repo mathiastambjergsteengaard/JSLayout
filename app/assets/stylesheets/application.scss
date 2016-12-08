@@ -40,7 +40,7 @@ body{
   }
   padding-top: 50px;
   .container{
-
+    margin-bottom: 20px;
     width: 100%;
     margin-top:20px;
   }
@@ -93,6 +93,44 @@ ul.dropdown-cart li .item:after{
     height: 0;
 }
 
+.footer{
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0px;
+  border-top:solid;
+  border-top-width: 2px;
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+ .users_new {
+   th, td {
+     padding-right: 100px;
+   }
+   .price {
+     padding-right: 0px;
+   }
+ }
+
+.users_create {
+   th, td {
+     padding-right: 100px;
+   }
+   .price {
+     padding-right: 0px;
+   }
+
+  .form-group{
+    margin-bottom: 0px;
+  }
+
+  .error{
+    margin-bottom: 15px;
+    color: red;
+  }
+ }
  .orders_show{
    .order-list{
      font-size: 28px;
@@ -101,7 +139,8 @@ ul.dropdown-cart li .item:after{
    .headline{
      margin-bottom: 25px;
    }
-   img{
+
+   body.img{
      width:100%;
      padding: 0px;
      border-radius: 0px;

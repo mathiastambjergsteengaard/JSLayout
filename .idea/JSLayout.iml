@@ -520,6 +520,28 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="mobileesp_converted (vbundled(0.2.3), /Users/mathias/projects/other/JSLayout/vendor/bundle/ruby/2.1.0/gems/mobileesp_converted-0.2.3) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/mobileesp_converted-0.2.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/mobileesp_converted-0.2.3/java_source" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/mobileesp_converted-0.2.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/mobileesp_converted-0.2.3/java_source" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mobvious (vbundled(0.3.2), /Users/mathias/projects/other/JSLayout/vendor/bundle/ruby/2.1.0/gems/mobvious-0.3.2) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/mobvious-0.3.2/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/mobvious-0.3.2/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="multi_json (vbundled(1.11.2), /Users/mathias/projects/other/JSLayout/vendor/bundle/ruby/2.1.0/gems/multi_json-1.11.2) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.1.0/gems/multi_json-1.11.2/lib" />

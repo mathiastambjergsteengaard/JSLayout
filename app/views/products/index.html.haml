@@ -15,9 +15,9 @@
 
 :coffeescript
   $ ->
-    order_number = getCookie("order_number")
-    if order_number
-      order_id = getCookie('order_id')
+    order_number = localStorage.getItem("order_number")
+    if order_number != null
+      order_id = localStorage.getItem("order_id")
       $('.add').each (i) ->
         product_id = $(this).attr('href').split('=')[1]
         $(this).attr 'href', '/orders/' + order_id + '/edit?product_id=' + product_id

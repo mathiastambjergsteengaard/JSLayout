@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   resources :products
   resources :orders do
     member do
-      post 'check_out'
+      get 'checkout'
+      post 'placeorder'
+      post 'minus'
+      post 'plus'
     end
   end
   resources :users

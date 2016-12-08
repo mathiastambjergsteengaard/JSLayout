@@ -12,13 +12,18 @@
       .col-xs-8
         .container
           = yield
+    .row
+      .footer
+        - fsdfs
+        - if request.env['mobvious.device_type'] == :mobile
+          = image_tag('footer.png')
 
 
 :coffeescript
   $ ->
-    $('.cart_badge').html(getCookie("order_number"))
-    Shadowbox.init();
-    order_id = getCookie('order_id')
-    if order_id != null
-      $('.cart').attr('href', "/orders/" + order_id)
+    if typeof(Storage) != "undefined"
+      $('.cart_badge').html(localStorage.getItem("order_number"))
+      order_id = localStorage.getItem("order_id")
+      if order_id != null
+        $('.cart').attr('href', "/orders/" + order_id)
 

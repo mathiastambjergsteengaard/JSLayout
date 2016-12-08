@@ -26,6 +26,7 @@ gem 'sass-rails', '>= 3.2'
 gem 'font-awesome-rails'
 gem 'shadowbox-rails'
 gem 'simple_form'
+gem 'mobvious'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
