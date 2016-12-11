@@ -1,6 +1,7 @@
 class Order < ActiveRecord::Base
   has_and_belongs_to_many :products
   has_many :orders_products, foreign_key: :order_id
+  has_many :product, through: :orders_products
   has_one :user, foreign_key: :user_id
 
 

@@ -5,6 +5,7 @@ class Product < ActiveRecord::Base
   WALL20x20 = 1
   WALL20x42 = 2
 
+
   def wall20x20?
     self.product_type == WALL20x20
   end
